@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./ico/m1.ico" type="image/x-icon">
+    <title>ToDo list</title>
+</head>
+<body>
+    <div id="root">
+        <header>
+            <h1>ToDo list</h1>
+        </header>
+        
+        <main>
+            <form autocomplete="off">
+                <label>
+                    <input maxlength="50" id="new-todo" name="todo" type="text" placeholder="Write new ToDo" />
+                </label>
+                <select aria-placeholder="Select user" id="user-todo" name="user">
+                    <option disabled selected>Select user</option>
+                </select>
+                <div class="sepr"></div>
+                <button id="add">Add Todo</button>
+                <div class="sepr"></div>
+
+            </form>
+            
+            <ul id="todo-list">
+                
+            </ul>
+        </main>
+        <footer>
+            <h2>#01 project</h2>
+        </footer>
+    </div>
+    <div id="error-box">
+        
+    </div>
+    <script defer src="./js/app.js"></script>
+</body>
+</html>

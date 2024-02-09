@@ -1,0 +1,198 @@
+@font-face {
+    font-family: main;
+    src: url(../font/RobotoMono-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%; height: 100%;
+}
+body{
+    font-family: main;
+    position: relative;
+}
+#root{
+    height: 100%; width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: mintcream;
+    gap: 10px;
+}
+
+main{
+    background-color: chocolate;
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+}
+input, select, #add, .sepr{
+    width: 100%;
+    
+}
+input{
+    border-radius: 15px 15px 0 0;
+}
+input, select, #add{
+    border: 2px solid black;
+    outline: none;  
+    background-color: #E07A3F;
+    padding: 10px;
+}
+input:focus, select:focus{
+    background-color: #A0521D;
+}
+input::placeholder{
+    color: black;
+}  
+option{
+    background-color: #E07A3F;
+}
+#add{
+    cursor: pointer;
+}
+.sepr{
+    height: 2px;
+    background-color: black;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+
+header{
+    border-radius: 0 0 15px 15px;
+}
+
+footer{
+    border-radius: 15px 15px 0 0;
+}
+
+footer, header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    min-height: 100px;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+#todo-list{
+    width: 40%;
+    border-radius: 0 0 15px 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.li{
+    padding: 10px 50px 10px 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.title{
+    color: aquamarine;
+}
+.title::before{
+    content: 'Title: ';
+    color: aliceblue;
+}
+.user{
+    color: aquamarine;
+}
+.user::before{
+    content: 'User: ';
+    color: aliceblue;
+}
+.status-block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.status-block::before{
+    content: 'Status: ';
+    color: aliceblue;
+}
+.status{
+    width: 25px; height: 25px;
+    cursor: pointer;
+}
+.delete{
+    position: absolute;
+    width: 25px;height: 25px;
+    cursor: pointer;
+    background-color: chocolate;
+    color: brown;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    right: 5px;
+    top: 5px;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+#error-box{
+    position: fixed;
+    bottom: 10px;
+    right: -10px;
+
+    padding: 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: red;
+
+    display: flex;
+    gap: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    cursor: pointer;
+}
+#error-box.show {
+    right: 10px;
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 880px) {
+    form, #todo-list{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 660px) {
+    form, #todo-list{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 550px) {
+    form, #todo-list{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 400px) {
+    form, #todo-list{
+        width: 95%;
+    }
+}
